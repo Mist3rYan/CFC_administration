@@ -12,7 +12,7 @@ Ce projet est un gestionnaire de base de données développé avec Symfony et Ea
 - **Gestion des Continents :** Permet d'ajouter, modifier et supprimer des continents.
 - **Gestion des Pays :** Permet d'ajouter, modifier et supprimer des pays associés à des continents.
 - **Gestion des Clubs :** Permet d'ajouter, modifier et supprimer des clubs de football associés à des pays.
-- **Gestion des Questions :** Permet d'ajouter, modifier et supprimer des questions de quiz sur le football.
+- **Gestion des Questions :** Permet d'ajouter, modifier et supprimer des questions de quiz sur le football associés à des clubs ou des pays.
 
 ## Installation
 
