@@ -1,0 +1,10 @@
+{# templates/bundles/EasyAdmin/layout.html.twig #}
+
+{% extends '@!EasyAdmin/layout.html.twig' %}
+
+{% block body_javascript %}
+	{{ parent() }}
+	<script src="{{ asset('js/traduire.js') }}"></script>
+	<script src="{{ asset('js/traduireQuestion.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CFC Administration
+{% endblock %}
+
+{% block body %}
+	<div class="bg-gray-900 min-h-screen flex items-center justify-center">
+		<div class="text-center text-white">
+			<h1 class="text-4xl font-bold mb-4">Bienvenue sur CFC Administration</h1>
+			<p class="text-lg mb-8">Gérez votre base de données.</p>
+			<a href="{{ path('app_login') }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+				Accéder au tableau de bord
+			</a>
+		</div>
+	</div>
+{% endblock %}

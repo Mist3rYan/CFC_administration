@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion - CFC Administration
+{% endblock %}
+
+{% block body %}
+	<div class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
+		<div class="text-center text-white mb-8">
+			<div class="flex items-center justify-center space-x-20">
+				<i class="fa fa-futbol text-4xl mb-4"></i>
+				<h1 class="text-4xl font-bold mb-4 text-blue-400 ">
+					<a href="{{ path('app_home') }}">
+						CFC Administration</a>
+				</h1>
+				<i class="fa fa-futbol text-4xl mb-4"></i>
+			</div>
+			<p class="text-lg mb-8">Gérez facilement votre base de données de quizz sur le football.</p>
+		</div>
+		<div class="text-center text-white w-96">
+			<h1 class="text-4xl font-bold mb-4">Connexion</h1>
+			<form method="post">
+				{% if error %}
+					<div class="text-red-500 mb-4">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				{% if app.user %}
+					<div class="mb-3">
+						Vous êtes connecté en tant que
+						{{ app.user.userIdentifier }},
+						<a href="{{ path('app_logout') }}" class="text-blue-400 hover:underline">Déconnexion</a>
+					</div>
+				{% endif %}
+
+				<label for="inputEmail" class="block mb-2">Email</label>
+				<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="bg-gray-800 text-white rounded-md px-3 py-2 w-full mb-4" autocomplete="email" required autofocus>
+
+				<label for="inputPassword" class="block mb-2">Mot de passe</label>
+				<input type="password" name="password" id="inputPassword" class="bg-gray-800 text-white rounded-md px-3 py-2 w-full mb-4" autocomplete="current-password" required>
+
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+				<div class="flex items-center mb-4">
+					<input type="checkbox" name="_remember_me" id="remember_me" class="mr-2">
+					<label for="remember_me" class="text-white">Se souvenir de moi</label>
+				</div>
+
+				<button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full" type="submit">
+					Se connecter
+				</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}
