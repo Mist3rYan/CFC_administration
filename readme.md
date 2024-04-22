@@ -1,8 +1,3 @@
-Bien sûr ! Voici le README.md en markdown :
-
-markdown
-Copy code
-
 # Gestionnaire de Base de Données de Quiz sur le Football
 
 Ce projet est un gestionnaire de base de données développé avec Symfony et EasyAdmin pour gérer des données liées aux quiz sur le football. Il permet de gérer les continents, les pays, les clubs et les questions associées.
