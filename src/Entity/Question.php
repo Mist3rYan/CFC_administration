@@ -73,6 +73,9 @@ class Question
     #[ORM\Column(length: 255)]
     private ?string $es_correct = null;
 
+    #[ORM\Column]
+    private ?bool $isWorld = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -319,6 +322,18 @@ class Question
     public function setEsCorrect(string $es_correct): static
     {
         $this->es_correct = $es_correct;
+
+        return $this;
+    }
+
+    public function isWorld(): ?bool
+    {
+        return $this->isWorld;
+    }
+
+    public function setWorld(bool $isWorld): static
+    {
+        $this->isWorld = $isWorld;
 
         return $this;
     }
